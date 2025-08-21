@@ -4,8 +4,8 @@
 
 ## 项目链接
 
-- 线上地址：video.yuyuwang.online
-- 后端仓库：https://github.com/ikun0731/videoapp-backend
+**在线访问地址：** [video.yuyuwang.online](http://video.yuyuwang.online)
+**后端仓库地址：** https://github.com/ikun0731/videoapp-backend
 
 ## 项目简介
 
