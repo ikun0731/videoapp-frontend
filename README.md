@@ -42,7 +42,7 @@
 1. 克隆项目到本地
 
 ```bash
-git clone [Github仓库地址]
+git clone https://github.com/ikun0731/videoapp-frontend.git
 cd mini-video-site-frontend
 ```
 
