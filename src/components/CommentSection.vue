@@ -79,12 +79,10 @@ const fetchComments = async () => {
     try {
       const data = await getCommentsForVideo(props.videoId);
       comments.value = data;
-      // 【新增诊断代码】如果评论不为空，打印第一个评论的 commenter 对象
       if (data && data.length > 0) {
         console.log('评论者 (commenter) 对象:', data[0].commenter);
       }
     } catch (error) {
-    // 只保留 console.error
     console.error("获取评论列表失败:", error);
 }
   }
@@ -144,7 +142,6 @@ onMounted(() => {
 .comment-list { margin-top: 20px; }
 .comment-item { display: flex; flex-direction: column; padding: 16px 0; border-top: 1px solid #f0f2f5; }
 .comment-item:first-child { padding-top: 0; border-top: none; }
-/* 【新增】router-link 的样式 */
 .commenter-link { text-decoration: none; color: inherit; }
 .comment-header { display: flex; align-items: center; margin-bottom: 8px; }
 .commenter-nickname { margin-left: 10px; font-weight: 600; font-size: 14px; color: #303133; }

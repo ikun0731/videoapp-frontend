@@ -59,7 +59,7 @@ const currentPage = ref(1);
 const pageSize = ref(12);
 const totalVideos = ref(0);
 
-// 【核心修正】在这里也定义 baseURL
+
 const baseURL = import.meta.env.VITE_APP_BASE_URL || 'http://localhost:8081';
 
 const fullAvatarUrl = computed(() => {

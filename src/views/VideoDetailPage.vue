@@ -85,12 +85,7 @@ watch(videoId, (newId, oldId) => {
     fetchVideoData(newId);
     window.scrollTo(0, 0);
   }
-}, { immediate: true }); // 使用 immediate 选项，让 watch 在组件初始化时就执行一次
-
-// onMounted 不再需要了，因为 watch 的 immediate 选项已经覆盖了它的功能
-// onMounted(() => {
-//   fetchVideoData(videoId.value);
-// });
+}, { immediate: true }); 
 
 const baseURL = import.meta.env.VITE_APP_BASE_URL || 'http://localhost:8081';
 const isOwner = computed(() => userStore.isLoggedIn && videoData.value?.uploader?.username === userStore.userInfo.username);

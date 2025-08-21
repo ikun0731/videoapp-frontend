@@ -58,9 +58,8 @@ const videoFile = ref(null);
 const coverFile = ref(null);
 const isSubmitting = ref(false);
 const uploadPercent = ref(0);
-const uploadSuccess = ref(false); // 【新增】标记上传是否成功
+const uploadSuccess = ref(false); 
 
-// --- 【核心修正A】用于触发隐藏的 input ---
 const videoInputRef = ref(null);
 const coverInputRef = ref(null);
 
@@ -123,7 +122,6 @@ const handleSubmit = async () => {
       uploadPercent.value = Math.floor((progressEvent.loaded * 100) / progressEvent.total);
     });
 
-    // 【核心修正B】优化成功后的跳转体验
     uploadSuccess.value = true;
     isSubmitting.value = false; // 停止按钮的 loading 状态
     ElMessage.success('上传成功！1.5秒后将自动跳转...');
@@ -145,7 +143,7 @@ const handleSubmit = async () => {
   max-width: 800px;
   margin: 20px auto;
 }
-/* 【核心修正C】移除返回箭头的黑框 */
+
 :deep(.el-page-header__header) {
   outline: none;
 }
@@ -154,7 +152,7 @@ const handleSubmit = async () => {
   background-color: #fff;
   border-radius: 8px;
 }
-/* 【新增】文件名的样式，处理长文本溢出 */
+
 .file-name {
   margin-left: 10px;
   font-size: 14px;

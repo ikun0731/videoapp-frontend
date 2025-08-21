@@ -54,7 +54,6 @@ const videoId = ref(null);
 const isLoading = ref(true);
 const isSubmitting = ref(false);
 const currentCoverUrl = ref('');
-// 【新增】定义 baseURL
 const baseURL = import.meta.env.VITE_APP_BASE_URL || 'http://localhost:8081';
 const form = reactive({
   title: '',
@@ -65,7 +64,6 @@ const newCoverFileList = ref([]);
 const goBack = () => router.go(-1);
 
 const handleCoverChange = (file) => {
-  // el-upload v-model 会自动处理文件列表，我们只需要确保列表长度为1
   if (newCoverFileList.value.length > 1) {
     newCoverFileList.value.shift();
   }
@@ -77,7 +75,7 @@ const handleUpdate = async () => {
   isSubmitting.value = true;
   const formData = new FormData();
 
-  // 只有当字段不为空时才添加到 FormData，以支持PATCH部分更新
+
   if (form.title) formData.append('title', form.title);
   if (form.description) formData.append('description', form.description);
   
@@ -104,7 +102,7 @@ onMounted(async () => {
     form.title = data.title;
     form.description = data.description;
 
-    // 【核心修正】应用我们新的、更健壮的 URL 处理逻辑
+  
     if (data.coverUrl) {
       if (data.coverUrl.startsWith('http')) {
         currentCoverUrl.value = data.coverUrl;

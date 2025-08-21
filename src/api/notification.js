@@ -21,7 +21,7 @@ export const markNotificationAsRead = (notificationId) => {
     method: 'post'
   });
 };
-// 【新增】
+
 export const markAllNotificationsAsRead = () => {
   return request({
     url: '/notifications/read-all',

@@ -1,14 +1,12 @@
-/* 导入 Google Font "Noto Sans SC" (一个高质量的开源中文字体) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
 
-/* 定义全新的“深海蔚蓝”主题颜色变量 */
 :root {
-  --theme-color-primary: #007BFF; /* 深海蔚蓝 */
-  --theme-color-accent: #FFC107;  /* 日光金 */
-  --theme-color-text: #212529;    /* 深灰 */
-  --theme-color-bg: #FFFFFF;       /* 纯净白 */
-  --theme-color-bg-alt: #F8F9FA; /* 备用背景色(更柔和的白) */
-  --theme-color-border: #E9ECEF;  /* 边框/分割线 */
+  --theme-color-primary: #007BFF; 
+  --theme-color-accent: #FFC107; 
+  --theme-color-text: #212529;   
+  --theme-color-bg: #FFFFFF;       
+  --theme-color-bg-alt: #F8F9FA; 
+  --theme-color-border: #E9ECEF;  
 }
 
 /* 全局样式 */
@@ -56,7 +54,7 @@ body {
   box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
 }
 
-/* App 容器样式 (保持不变) */
+/* App 容器样式*/
 .app-container { min-height: 100vh; display: flex; flex-direction: column; }
 .app-container .el-header { flex-shrink: 0; }
 .app-container .el-main { flex-grow: 1; padding: 20px; }

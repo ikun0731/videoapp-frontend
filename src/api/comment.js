@@ -18,7 +18,7 @@ export const postComment = (videoId, data) => {
   })
 }
 
-// 【新增】删除评论的接口函数
+//删除评论的接口函数
 // DELETE /api/comments/{commentId}
 export const deleteComment = (commentId) => {
   return request({

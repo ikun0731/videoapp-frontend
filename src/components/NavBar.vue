@@ -273,7 +273,6 @@ const handleRegister = async () => {
     }
 };
 
-// 【核心修正】恢复被我不小心删除的函数
 const handleClaimDaily = async () => {
     if (!userStore.userInfo.canClaimDaily) { return ElMessage.info('您今天已经签到过了哦'); }
     try {
