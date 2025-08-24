@@ -3,15 +3,15 @@
  * 定义了应用的基本结构和全局样式，处理用户身份验证恢复
  */
 <template>
-  <el-container class="app-container">
+  <div class="app-container">
     <!-- 顶部导航栏 -->
     <NavBar />
     
     <!-- 主内容区域 -->
-    <el-main>
+    <div class="main-content">
       <router-view />
-    </el-main>
-  </el-container>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -54,9 +54,15 @@ onMounted(async () => {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: var(--theme-color-bg);
   color: var(--theme-color-text);
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /**
@@ -66,22 +72,21 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.app-container .el-header {
-  flex-shrink: 0;
-  z-index: 100;
-}
-
-.app-container .el-main {
+.main-content {
   flex-grow: 1;
-  padding: 20px;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* 响应式调整 */
 @media (max-width: 768px) {
-  .app-container .el-main {
-    padding: 15px 10px;
+  .main-content {
+    padding: 0;
   }
 }
 </style>

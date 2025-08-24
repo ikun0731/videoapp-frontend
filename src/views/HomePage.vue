@@ -132,8 +132,11 @@ onMounted(() => {
 /* 首页容器样式 */
 .home-container {
   max-width: 1400px;
-  margin: 20px auto;
-  padding: 0 10px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* 排序选项区样式 */
@@ -145,13 +148,12 @@ onMounted(() => {
 
 /* 栅格布局调整 */
 .el-row {
-  margin-left: -10px;
-  margin-right: -10px;
+  margin: 0;
+  width: 100%;
 }
 
 .el-col {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px;
   margin-bottom: 20px;
 }
 

@@ -301,18 +301,30 @@ const navigateTo = (path) => {
 
 <style scoped>
 .navbar {
-  position: relative; display: flex; justify-content: center; align-items: center;
-  padding: 0 20px; border-bottom: 1px solid #E9ECEF; background-color: #FFFFFF;
+  position: relative; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 20px; 
+  border-bottom: 1px solid #E9ECEF; 
+  background-color: #FFFFFF;
   height: 60px;
+  width: 100%;
 }
 .logo-container {
-  position: absolute; left: 20px; top: 50%; transform: translateY(-50%);
-  font-size: 22px; font-weight: 700; cursor: pointer; color: #007BFF;
+  font-size: 22px; 
+  font-weight: 700; 
+  cursor: pointer; 
+  color: #007BFF;
 }
-.search-container { width: 100%; max-width: 400px; }
+.search-container { 
+  width: 100%; 
+  max-width: 400px;
+  margin: 0 20px;
+}
 .menu-container {
-  position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
-  display: flex; align-items: center;
+  display: flex; 
+  align-items: center;
 }
 .user-menu { display: flex; align-items: center; }
 .notification-bell {
@@ -328,8 +340,22 @@ const navigateTo = (path) => {
 .show-on-mobile { display: none; }
 
 @media (max-width: 768px) {
-  .navbar { justify-content: space-between; }
-  .logo-container, .menu-container { position: static; transform: none; }
+  .navbar { 
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+  .logo-container { 
+    position: static; 
+    transform: none;
+  }
+  .search-container { 
+    display: none;
+  }
+  .menu-container {
+    position: static; 
+    transform: none;
+  }
   .hide-on-mobile { display: none; }
   .show-on-mobile { display: block; cursor: pointer; }
 }
